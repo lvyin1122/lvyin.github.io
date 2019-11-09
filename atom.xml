@@ -203,8 +203,8 @@
   
   <entry>
     <title>My New Post</title>
-    <link href="http://yoursite.com/2019/11/09/My-New-Post/"/>
-    <id>http://yoursite.com/2019/11/09/My-New-Post/</id>
+    <link href="http://yoursite.com/2019/11/09/My-New-Post%20-%20Copy%20(2)/"/>
+    <id>http://yoursite.com/2019/11/09/My-New-Post - Copy (2)/</id>
     <published>2019-11-09T12:20:21.000Z</published>
     <updated>2019-11-09T12:24:42.416Z</updated>
     
@@ -228,8 +228,8 @@
   
   <entry>
     <title>My New Post</title>
-    <link href="http://yoursite.com/2019/11/09/My-New-Post%20-%20Copy%20(2)/"/>
-    <id>http://yoursite.com/2019/11/09/My-New-Post - Copy (2)/</id>
+    <link href="http://yoursite.com/2019/11/09/My-New-Post%20-%20Copy%20(3)/"/>
+    <id>http://yoursite.com/2019/11/09/My-New-Post - Copy (3)/</id>
     <published>2019-11-09T12:20:21.000Z</published>
     <updated>2019-11-09T12:24:42.416Z</updated>
     
@@ -278,8 +278,8 @@
   
   <entry>
     <title>My New Post</title>
-    <link href="http://yoursite.com/2019/11/09/My-New-Post%20-%20Copy%20(3)/"/>
-    <id>http://yoursite.com/2019/11/09/My-New-Post - Copy (3)/</id>
+    <link href="http://yoursite.com/2019/11/09/My-New-Post/"/>
+    <id>http://yoursite.com/2019/11/09/My-New-Post/</id>
     <published>2019-11-09T12:20:21.000Z</published>
     <updated>2019-11-09T12:24:42.416Z</updated>
     
