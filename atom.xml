@@ -116,8 +116,8 @@
   
   <entry>
     <title>中文文本测试</title>
-    <link href="http://yoursite.com/2019/11/09/Test%20-%20Copy/"/>
-    <id>http://yoursite.com/2019/11/09/Test - Copy/</id>
+    <link href="http://yoursite.com/2019/11/09/Test%20-%20Copy%20(2)/"/>
+    <id>http://yoursite.com/2019/11/09/Test - Copy (2)/</id>
     <published>2019-11-09T12:21:18.000Z</published>
     <updated>2019-11-09T14:11:43.360Z</updated>
     
@@ -145,8 +145,8 @@
   
   <entry>
     <title>中文文本测试</title>
-    <link href="http://yoursite.com/2019/11/09/Test%20-%20Copy%20(2)/"/>
-    <id>http://yoursite.com/2019/11/09/Test - Copy (2)/</id>
+    <link href="http://yoursite.com/2019/11/09/Test%20-%20Copy/"/>
+    <id>http://yoursite.com/2019/11/09/Test - Copy/</id>
     <published>2019-11-09T12:21:18.000Z</published>
     <updated>2019-11-09T14:11:43.360Z</updated>
     
@@ -203,6 +203,31 @@
   
   <entry>
     <title>My New Post</title>
+    <link href="http://yoursite.com/2019/11/09/My-New-Post%20-%20Copy%20(2)/"/>
+    <id>http://yoursite.com/2019/11/09/My-New-Post - Copy (2)/</id>
+    <published>2019-11-09T12:20:21.000Z</published>
+    <updated>2019-11-09T12:24:42.416Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Ha-Ha-Ha-This-is-only-a-test&quot;&gt;&lt;a href=&quot;#Ha-Ha-Ha-This-is-only-a-test&quot; class=&quot;headerlink&quot; title=&quot;Ha Ha Ha This is only a
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="My New Post" scheme="http://yoursite.com/tags/My-New-Post/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>My New Post</title>
     <link href="http://yoursite.com/2019/11/09/My-New-Post%20-%20Copy%20(3)/"/>
     <id>http://yoursite.com/2019/11/09/My-New-Post - Copy (3)/</id>
     <published>2019-11-09T12:20:21.000Z</published>
@@ -230,31 +255,6 @@
     <title>My New Post</title>
     <link href="http://yoursite.com/2019/11/09/My-New-Post/"/>
     <id>http://yoursite.com/2019/11/09/My-New-Post/</id>
-    <published>2019-11-09T12:20:21.000Z</published>
-    <updated>2019-11-09T12:24:42.416Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Ha-Ha-Ha-This-is-only-a-test&quot;&gt;&lt;a href=&quot;#Ha-Ha-Ha-This-is-only-a-test&quot; class=&quot;headerlink&quot; title=&quot;Ha Ha Ha This is only a
-        
-      
-    
-    </summary>
-    
-    
-    
-      <category term="My New Post" scheme="http://yoursite.com/tags/My-New-Post/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>My New Post</title>
-    <link href="http://yoursite.com/2019/11/09/My-New-Post%20-%20Copy%20(2)/"/>
-    <id>http://yoursite.com/2019/11/09/My-New-Post - Copy (2)/</id>
     <published>2019-11-09T12:20:21.000Z</published>
     <updated>2019-11-09T12:24:42.416Z</updated>
     
