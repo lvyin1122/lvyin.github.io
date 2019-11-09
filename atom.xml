@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Lvyin&#39;s Blog</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-11-09T12:21:18.076Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Hugh Wong</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Test</title>
+    <link href="http://yoursite.com/2019/11/09/Test/"/>
+    <id>http://yoursite.com/2019/11/09/Test/</id>
+    <published>2019-11-09T12:21:18.000Z</published>
+    <updated>2019-11-09T12:21:18.076Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>My New Post</title>
+    <link href="http://yoursite.com/2019/11/09/My-New-Post/"/>
+    <id>http://yoursite.com/2019/11/09/My-New-Post/</id>
+    <published>2019-11-09T12:20:21.000Z</published>
+    <updated>2019-11-09T12:24:42.416Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Ha-Ha-Ha-This-is-only-a-test&quot;&gt;&lt;a href=&quot;#Ha-Ha-Ha-This-is-only-a-test&quot; class=&quot;headerlink&quot; title=&quot;Ha Ha Ha This is only a
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="My New Post" scheme="http://yoursite.com/tags/My-New-Post/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2019/11/09/hello-world/"/>
+    <id>http://yoursite.com/2019/11/09/hello-world/</id>
+    <published>2019-11-09T11:58:00.354Z</published>
+    <updated>2019-11-09T11:58:00.354Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
