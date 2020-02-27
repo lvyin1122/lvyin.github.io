@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lvyin1122.github.io/"/>
-  <updated>2020-02-27T02:21:33.279Z</updated>
+  <updated>2019-11-10T03:23:33.893Z</updated>
   <id>http://lvyin1122.github.io/</id>
   
   <author>
@@ -15,32 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>[Stanford CS 107] Lecture 1/Lecture 1</title>
-    <link href="http://lvyin1122.github.io/2020/02/27/%5BStanford%20CS%20107%5D%20Lecture%201/Lecture%201/"/>
-    <id>http://lvyin1122.github.io/2020/02/27/[Stanford CS 107] Lecture 1/Lecture 1/</id>
-    <published>2020-02-27T01:59:23.542Z</published>
-    <updated>2020-02-27T02:21:33.279Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;hr&gt;
-&lt;p&gt;title:[Stanford CS 107] Lecture 1&lt;br&gt;date:2019-11-10 10:39:11&lt;br&gt;tags:Stanford&lt;br&gt;categories:Notes  &lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&quot;Lecture-1&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
   
   <entry>
     <title>第一篇博客及其前后</title>
@@ -64,33 +38,6 @@
     
     
       <category term="杂感" scheme="http://lvyin1122.github.io/tags/%E6%9D%82%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Lecture 1</title>
-    <link href="http://lvyin1122.github.io/2019/11/10/%5BStanford%20CS%20107%5D/Lecture%201/"/>
-    <id>http://lvyin1122.github.io/2019/11/10/[Stanford CS 107]/Lecture 1/</id>
-    <published>2019-11-10T02:39:11.000Z</published>
-    <updated>2020-02-27T02:27:06.484Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Lecture-1&quot;&gt;&lt;a href=&quot;#Lecture-1&quot; class=&quot;headerlink&quot; title=&quot;Lecture 1&quot;&gt;&lt;/a&gt;Lecture 1&lt;/h1&gt;&lt;h2 id=&quot;What-is-Unix&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Notes" scheme="http://lvyin1122.github.io/categories/Notes/"/>
-    
-    
-      <category term="Stanford" scheme="http://lvyin1122.github.io/tags/Stanford/"/>
     
   </entry>
   
