@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="Lvyin&#39;s Blog">
 <meta property="og:description" content="Lecture 5RecapSearching For Letterschar daisy[6]; strcpy(daisy, &quot;Daisy&quot;); char *letterA = strchr(daisy, &amp;apos;a&amp;apos;); printf(&quot;%s\n&quot;, daisy); &#x2F;&#x2F;Daisy printf(&quot;%s\n&quot;, letterA);&#x2F;&#x2F;aisy  strrchr(daisy, &amp;apos;a&amp;apos;); &#x2F;&#x2F;last">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-29T09:39:26.986Z">
+<meta property="og:updated_time" content="2020-02-29T09:44:45.041Z">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
   <link rel="canonical" href="http://lvyin1122.github.io/2019/11/21/Stanford%20CS%20107/Lecture%205/Lecture%205/index.html">
@@ -370,9 +370,10 @@
 <blockquote>
 <p>How many places can we go in the first string before I encounter a character <strong>not in</strong> the second string?</p>
 </blockquote>
-<pre><code>char daisy[10];
-strcpy(daisy, &quot;Daisy Dog&quot;);
-int spanLength = strspn(daisy, &quot;driso&quot;); //2</code></pre><blockquote>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">char</span> daisy<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token function">strcpy</span><span class="token punctuation">(</span>daisy<span class="token punctuation">,</span> <span class="token string">"Daisy Dog"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> spanLength <span class="token operator">=</span> <span class="token function">strspn</span><span class="token punctuation">(</span>daisy<span class="token punctuation">,</span> <span class="token string">"driso"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//2</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<blockquote>
 <p>How many places can we go in the first string before I encounter a character <strong>in</strong> the second string?</p>
 </blockquote>
 <h3 id="C-Strings-As-Parameters"><a href="#C-Strings-As-Parameters" class="headerlink" title="C Strings As Parameters"></a>C Strings As Parameters</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span>str<span class="token punctuation">)</span> <span class="token punctuation">{</span>
