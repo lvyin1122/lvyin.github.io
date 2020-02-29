@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lvyin1122.github.io/"/>
-  <updated>2019-11-10T03:23:33.893Z</updated>
+  <updated>2020-02-29T09:05:59.367Z</updated>
   <id>http://lvyin1122.github.io/</id>
   
   <author>
@@ -17,117 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>第一篇博客及其前后</title>
-    <link href="http://lvyin1122.github.io/2019/11/10/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://lvyin1122.github.io/2019/11/10/第一篇博客/</id>
-    <published>2019-11-10T02:39:11.000Z</published>
-    <updated>2019-11-10T03:23:33.893Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;用一个晚上的功夫总算搞定了自己的博客。本以为是像Wix那样简单的选个模板就能搞定的事情，最后发展到和WordPress死磕了半天，又Google了很久如何适配Markdown，最后才寻到Github做静态网页这条路，又是死磕了半天模板的问题。最终网页还是没确定下来，一篇文章
-        
-      
-    
-    </summary>
-    
-    
-    
-      <category term="杂感" scheme="http://lvyin1122.github.io/tags/%E6%9D%82%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
     <title>CS107 Lecture 1</title>
-    <link href="http://lvyin1122.github.io/2019/11/10/Stanford%20CS%20107/Lecture%201/"/>
-    <id>http://lvyin1122.github.io/2019/11/10/Stanford CS 107/Lecture 1/</id>
-    <published>2019-11-10T02:39:11.000Z</published>
-    <updated>2020-02-27T02:42:49.857Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Lecture-1&quot;&gt;&lt;a href=&quot;#Lecture-1&quot; class=&quot;headerlink&quot; title=&quot;Lecture 1&quot;&gt;&lt;/a&gt;Lecture 1&lt;/h1&gt;&lt;h2 id=&quot;What-is-Unix&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Notes" scheme="http://lvyin1122.github.io/categories/Notes/"/>
-    
-    
-      <category term="Stanford" scheme="http://lvyin1122.github.io/tags/Stanford/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CS107 Lecture 2</title>
-    <link href="http://lvyin1122.github.io/2019/11/10/Stanford%20CS%20107/Lecture%202/"/>
-    <id>http://lvyin1122.github.io/2019/11/10/Stanford CS 107/Lecture 2/</id>
-    <published>2019-11-10T02:39:11.000Z</published>
-    <updated>2020-02-29T08:33:49.500Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Lecture-2&quot;&gt;&lt;a href=&quot;#Lecture-2&quot; class=&quot;headerlink&quot; title=&quot;Lecture 2&quot;&gt;&lt;/a&gt;Lecture 2&lt;/h1&gt;&lt;h2 id=&quot;Bits-and-Bytes&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Notes" scheme="http://lvyin1122.github.io/categories/Notes/"/>
-    
-    
-      <category term="Stanford" scheme="http://lvyin1122.github.io/tags/Stanford/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CS107 Lecture 3</title>
-    <link href="http://lvyin1122.github.io/2019/11/10/Stanford%20CS%20107/Lecture%203/"/>
-    <id>http://lvyin1122.github.io/2019/11/10/Stanford CS 107/Lecture 3/</id>
-    <published>2019-11-10T02:39:11.000Z</published>
-    <updated>2020-02-29T08:33:47.658Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Lecture-3&quot;&gt;&lt;a href=&quot;#Lecture-3&quot; class=&quot;headerlink&quot; title=&quot;Lecture 3&quot;&gt;&lt;/a&gt;Lecture 3&lt;/h1&gt;&lt;p&gt;ASCII (Americal Standard Code for
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Notes" scheme="http://lvyin1122.github.io/categories/Notes/"/>
-    
-    
-      <category term="Stanford" scheme="http://lvyin1122.github.io/tags/Stanford/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CS107 Lecture 1</title>
-    <link href="http://lvyin1122.github.io/2019/11/10/Stanford%20CS%20107/Lecture%205/"/>
-    <id>http://lvyin1122.github.io/2019/11/10/Stanford CS 107/Lecture 5/</id>
-    <published>2019-11-10T02:39:11.000Z</published>
-    <updated>2020-02-29T08:33:54.388Z</updated>
+    <link href="http://lvyin1122.github.io/2019/11/21/Stanford%20CS%20107/Lecture%205/"/>
+    <id>http://lvyin1122.github.io/2019/11/21/Stanford CS 107/Lecture 5/</id>
+    <published>2019-11-20T23:19:31.000Z</published>
+    <updated>2020-02-29T09:05:59.367Z</updated>
     
     <summary type="html">
     
@@ -151,10 +45,10 @@
   
   <entry>
     <title>CS107 Lecture 1</title>
-    <link href="http://lvyin1122.github.io/2019/11/10/Stanford%20CS%20107/Lecture%204/"/>
-    <id>http://lvyin1122.github.io/2019/11/10/Stanford CS 107/Lecture 4/</id>
-    <published>2019-11-10T02:39:11.000Z</published>
-    <updated>2020-02-29T08:33:46.916Z</updated>
+    <link href="http://lvyin1122.github.io/2019/11/14/Stanford%20CS%20107/Lecture%204/"/>
+    <id>http://lvyin1122.github.io/2019/11/14/Stanford CS 107/Lecture 4/</id>
+    <published>2019-11-14T15:49:21.000Z</published>
+    <updated>2020-02-29T09:05:43.893Z</updated>
     
     <summary type="html">
     
@@ -163,6 +57,87 @@
         
         
           &lt;h1 id=&quot;Lecture-4&quot;&gt;&lt;a href=&quot;#Lecture-4&quot; class=&quot;headerlink&quot; title=&quot;Lecture 4&quot;&gt;&lt;/a&gt;Lecture 4&lt;/h1&gt;&lt;h2 id=&quot;Characters&quot;&gt;&lt;a href=&quot;#Characters&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Notes" scheme="http://lvyin1122.github.io/categories/Notes/"/>
+    
+    
+      <category term="Stanford" scheme="http://lvyin1122.github.io/tags/Stanford/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CS107 Lecture 3</title>
+    <link href="http://lvyin1122.github.io/2019/11/13/Stanford%20CS%20107/Lecture%203/"/>
+    <id>http://lvyin1122.github.io/2019/11/13/Stanford CS 107/Lecture 3/</id>
+    <published>2019-11-13T04:25:31.000Z</published>
+    <updated>2020-02-29T09:05:28.855Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Lecture-3&quot;&gt;&lt;a href=&quot;#Lecture-3&quot; class=&quot;headerlink&quot; title=&quot;Lecture 3&quot;&gt;&lt;/a&gt;Lecture 3&lt;/h1&gt;&lt;p&gt;ASCII (Americal Standard Code for
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Notes" scheme="http://lvyin1122.github.io/categories/Notes/"/>
+    
+    
+      <category term="Stanford" scheme="http://lvyin1122.github.io/tags/Stanford/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CS107 Lecture 2</title>
+    <link href="http://lvyin1122.github.io/2019/11/12/Stanford%20CS%20107/Lecture%202/"/>
+    <id>http://lvyin1122.github.io/2019/11/12/Stanford CS 107/Lecture 2/</id>
+    <published>2019-11-12T07:43:55.000Z</published>
+    <updated>2020-02-29T09:05:13.866Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Lecture-2&quot;&gt;&lt;a href=&quot;#Lecture-2&quot; class=&quot;headerlink&quot; title=&quot;Lecture 2&quot;&gt;&lt;/a&gt;Lecture 2&lt;/h1&gt;&lt;h2 id=&quot;Bits-and-Bytes&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Notes" scheme="http://lvyin1122.github.io/categories/Notes/"/>
+    
+    
+      <category term="Stanford" scheme="http://lvyin1122.github.io/tags/Stanford/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CS107 Lecture 1</title>
+    <link href="http://lvyin1122.github.io/2019/11/10/Stanford%20CS%20107/Lecture%201/"/>
+    <id>http://lvyin1122.github.io/2019/11/10/Stanford CS 107/Lecture 1/</id>
+    <published>2019-11-10T02:39:11.000Z</published>
+    <updated>2020-02-27T02:42:49.857Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Lecture-1&quot;&gt;&lt;a href=&quot;#Lecture-1&quot; class=&quot;headerlink&quot; title=&quot;Lecture 1&quot;&gt;&lt;/a&gt;Lecture 1&lt;/h1&gt;&lt;h2 id=&quot;What-is-Unix&quot;&gt;&lt;a
         
       
     
