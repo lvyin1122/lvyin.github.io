@@ -17,16 +17,22 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>Repositories | Lvyin&#39;s Blog</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Repositories">
-<meta property="og:url" content="http:&#x2F;&#x2F;lvyin1122.github.io&#x2F;repository&#x2F;index.html">
+  <title>CS107 Lecture 3 | Lvyin&#39;s Blog</title>
+  <meta name="description" content="Lecture 3ASCII (Americal Standard Code for Information Interchange) Bitwise Operators and Masks&amp;amp;, |, ~, ^, &amp;lt;&amp;lt;, &amp;gt;&amp;gt; And(&amp;amp;)Or(|)Not(~)output = ~a; Exclusive Or (^)XOR exactly one bit">
+<meta name="keywords" content="Stanford">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CS107 Lecture 3">
+<meta property="og:url" content="http:&#x2F;&#x2F;lvyin1122.github.io&#x2F;2019&#x2F;11&#x2F;13&#x2F;Stanford%20CS%20107&#x2F;Lecture%203&#x2F;Lecture%203&#x2F;index.html">
 <meta property="og:site_name" content="Lvyin&#39;s Blog">
+<meta property="og:description" content="Lecture 3ASCII (Americal Standard Code for Information Interchange) Bitwise Operators and Masks&amp;amp;, |, ~, ^, &amp;lt;&amp;lt;, &amp;gt;&amp;gt; And(&amp;amp;)Or(|)Not(~)output = ~a; Exclusive Or (^)XOR exactly one bit">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-09T15:58:03.030Z">
+<meta property="og:image" content="c:%5CUsers%5Cthinkpad%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1580701782594.png">
+<meta property="og:image" content="c:%5CUsers%5Cthinkpad%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1580701858093.png">
+<meta property="og:updated_time" content="2020-02-29T09:05:28.855Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:%5CUsers%5Cthinkpad%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1580701782594.png">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://lvyin1122.github.io/repository/index.html">
+  <link rel="canonical" href="http://lvyin1122.github.io/2019/11/13/Stanford%20CS%20107/Lecture%203/Lecture%203/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Lvyin&#39;s Blog" type="application/atom+xml">
   
@@ -42,7 +48,7 @@
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
-<body class="main-center theme-blue no-sidebar" itemscope itemtype="http://schema.org/WebPage">
+<body class="main-center theme-blue" itemscope itemtype="http://schema.org/WebPage">
   <header class="header" itemscope itemtype="http://schema.org/WPHeader">
   <div class="slimContent">
     <div class="navbar-header">
@@ -306,46 +312,103 @@
 </aside>
 
   
-  <main class="main" role="main">
-  <article class="article article-repository article-type-list" itemscope="">
-  <header class="article-header">
-    <h1 itemprop="title">Repositories</h1>
-    <p class="text-muted">I have <span id="repo-count">0</span> projects on Github</p>
-  </header>
-  <div class="article-body">
-    <div class="repo-content">
-      <div class="blankslate">
-        <p>Loading...</p>
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-Stanford CS 107/Lecture 3/Lecture 3" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CS107 Lecture 3
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2019/11/13/Stanford%20CS%20107/Lecture%203/Lecture%203/" class="article-date">
+	  <time datetime="2019-11-13T04:25:31.000Z" itemprop="datePublished">2019-11-13</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/Notes/">Notes</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/Stanford/" rel="tag">Stanford</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/11/13/Stanford%20CS%20107/Lecture%203/Lecture%203/#comments" class="article-comment-link">Comments</a></span>
+        
       </div>
     </div>
-  </div>
-</article>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h1 id="Lecture-3"><a href="#Lecture-3" class="headerlink" title="Lecture 3"></a>Lecture 3</h1><p>ASCII (Americal Standard Code for Information Interchange)</p>
+<h2 id="Bitwise-Operators-and-Masks"><a href="#Bitwise-Operators-and-Masks" class="headerlink" title="Bitwise Operators and Masks"></a>Bitwise Operators and Masks</h2><p>&amp;, |, ~, ^, &lt;&lt;, &gt;&gt;</p>
+<h3 id="And-amp"><a href="#And-amp" class="headerlink" title="And(&amp;)"></a>And(&amp;)</h3><h3 id="Or"><a href="#Or" class="headerlink" title="Or(|)"></a>Or(|)</h3><h3 id="Not"><a href="#Not" class="headerlink" title="Not(~)"></a>Not(~)</h3><pre class="line-numbers language-c"><code class="language-c">output <span class="token operator">=</span> <span class="token operator">~</span>a<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="Exclusive-Or"><a href="#Exclusive-Or" class="headerlink" title="Exclusive Or (^)"></a>Exclusive Or (^)</h3><p>XOR</p>
+<p>exactly one bit of 1 → 1</p>
+<p><img src="C:%5CUsers%5Cthinkpad%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1580701782594.png" alt="1580701782594"></p>
+<p><img src="C:%5CUsers%5Cthinkpad%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1580701858093.png" alt="1580701858093"></p>
+<p><strong><em>Different from &amp;&amp; || and !</em></strong></p>
 
+      
+    </div>
+
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2019/11/14/Stanford%20CS%20107/Lecture%204/Lecture%204/" title="CS107 Lecture 4"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2019/11/12/Stanford%20CS%20107/Lecture%202/Lecture%202/" title="CS107 Lecture 2"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
   
 
 
-
-<!--Github项模版-->
-<script type="text/template" id="list-template">
-  <li class="col-sm-6 col-md-6 col-lg-4">
-    <div class="repo hover-shadow hover-grow">
-      <div class="repo-image geopattern" data-pattern-id="{%=name%}"></div>
-      <h3 class="repo-title"><a href="{%=clone_url%}" target="_blank" rel="external nofollow noopener noreferrer">{%=full_name%}</a></h3>
-      <p class="repo-body">{%=description%}</p>
-      <div class="repo-meta">
-        <span class="meta meta-type pull-left" aria-label="{%=language%} project">{%=language%}</span>
-        <span class="meta meta-star" aria-label="{%=stargazers_count%} stars"><i class="icon icon-star-fill"></i> {%=stargazers_count%}</span>
-        <span class="meta meta-fork" aria-label="{%=forks_count%} forks"><i class="icon icon-code-fork"></i> {%=forks_count%}</span>
-        <span class="meta meta-last-updated" aria-label="Updated：{%=updated_at%}">
-        <i class="icon icon-clock"></i> <time datetime="{%=updated_at%}">{%=updated_at%}</time></span>
-      </div>
-    </div>
-  </li>
-</script>
-<!--获取失败模版-->
-<script type="text/template" id="error-template">
-  <h3>Load Failed</h3><p>Try to Refresh...</p>
-</script>
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -391,61 +454,38 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 </script>
 
 
-   <script type="text/javascript">
-var open = function() {
-  var baiduTpl = new Object();
-  var handleTpl = function() {
-    baiduTpl.list = baidu.template("list-template");
-    baiduTpl.error = baidu.template("error-template");
-  };
 
-  var handleGithub = function() {
-    var repoContainer = $('.repo-content');
-    var errorContainer = repoContainer.find(".blankslate");
-    var countContainer = $("#repo-count");
 
-    $.get("https://api.github.com/users/lvyin1122/repos", function(result) {
-      if (result) {
-        errorContainer.remove();
-        countContainer.text(result.length); //设置项目个数
-        var ul = $("<ul class='repo-list row clearfix'></ul>");
-        result.sort(function(a, b) {
-          return new Date(b.updated_at) - new Date(a.updated_at)
-        }).sort(function(a, b) {
-          var a_start = a.stargazers_count;
-          var b_start = b.stargazers_count;
-          if (a.fork) a_start * 0.5;
-          if (b.fork) b_start * 0.5;
-          return b_start - a_start;
-        }).map(function(repo) {
-          if (!repo.description) repo.description = "";
-          repo.updated_at = repo.updated_at.substring(0, repo.updated_at.lastIndexOf("T"));
-          var html = baiduTpl.list(repo);
-          ul.append(html);
-        })
-
-        repoContainer.append(ul);
-        $(".geopattern").each(function() {
-          $(this).geopattern($(this).data('pattern-id'));
-        });
-      } else {
-        errorContainer.append(baiduTpl.error());
-      }
-    });
-  };
-
-  return {
-    init: function() {
-      handleTpl();
-      handleGithub();
-    }
-  }
-};
-$(open().init);
-</script>
+   
 
 
 
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: 'xqFWO5a06ueoeQoah9lmTucy-gzGzoHsz',
+    appKey: 'VQTcQIQV55vlxv88fuu4zFOc',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
 
 
 
