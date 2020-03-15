@@ -17,19 +17,15 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>CS107 Lecture 5 | Lvyin&#39;s Blog</title>
-  <meta name="description" content="Lecture 5RecapSearching For Letterschar daisy[6]; strcpy(daisy, &quot;Daisy&quot;); char *letterA = strchr(daisy, &amp;apos;a&amp;apos;); printf(&quot;%s\n&quot;, daisy); &#x2F;&#x2F;Daisy printf(&quot;%s\n&quot;, letterA);&#x2F;&#x2F;aisy  strrchr(daisy, &amp;apos;a&amp;apos;); &#x2F;&#x2F;last">
-<meta name="keywords" content="Stanford">
-<meta property="og:type" content="article">
-<meta property="og:title" content="CS107 Lecture 5">
-<meta property="og:url" content="http:&#x2F;&#x2F;lvyin1122.github.io&#x2F;2019&#x2F;11&#x2F;21&#x2F;Stanford%20CS%20107&#x2F;Lecture%205&#x2F;Lecture%205&#x2F;index.html">
+  <title>Archive: 2020/1 | Lvyin&#39;s Blog</title>
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Lvyin&#39;s Blog">
+<meta property="og:url" content="http:&#x2F;&#x2F;lvyin1122.github.io&#x2F;archives&#x2F;2020&#x2F;01&#x2F;index.html">
 <meta property="og:site_name" content="Lvyin&#39;s Blog">
-<meta property="og:description" content="Lecture 5RecapSearching For Letterschar daisy[6]; strcpy(daisy, &quot;Daisy&quot;); char *letterA = strchr(daisy, &amp;apos;a&amp;apos;); printf(&quot;%s\n&quot;, daisy); &#x2F;&#x2F;Daisy printf(&quot;%s\n&quot;, letterA);&#x2F;&#x2F;aisy  strrchr(daisy, &amp;apos;a&amp;apos;); &#x2F;&#x2F;last">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-29T09:44:45.041Z">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://lvyin1122.github.io/2019/11/21/Stanford%20CS%20107/Lecture%205/Lecture%205/index.html">
+  <link rel="canonical" href="http://lvyin1122.github.io/archives/2020/01/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Lvyin&#39;s Blog" type="application/atom+xml">
   
@@ -311,129 +307,48 @@
   
   
 <main class="main" role="main">
-  <div class="content">
-  <article id="post-Stanford CS 107/Lecture 5/Lecture 5" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  	<article class="content article article-archives article-type-list" itemscope="">
+	    <header class="article-header">
+	      <h1 itemprop="title">Archive: 2020/1</h1>
+	      <p class="text-muted">Total 1 articles</p>
+	    </header>
+	    <div class="article-body">
+	      
+  
+  
     
-    <div class="article-header">
+    
       
-        
-  
-    <h1 class="article-title" itemprop="name">
-      CS107 Lecture 5
-    </h1>
-  
-
       
-      <div class="article-meta">
-        <span class="article-date">
-    <i class="icon icon-calendar-check"></i>
-	<a href="/2019/11/21/Stanford%20CS%20107/Lecture%205/Lecture%205/" class="article-date">
-	  <time datetime="2019-11-20T23:19:31.000Z" itemprop="datePublished">2019-11-21</time>
-	</a>
-</span>
-        
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/Notes/">Notes</a>
-  </span>
-
-        
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/Stanford/" rel="tag">Stanford</a>
-  </span>
-
-
-        
-
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/11/21/Stanford%20CS%20107/Lecture%205/Lecture%205/#comments" class="article-comment-link">Comments</a></span>
-        
-      </div>
-    </div>
-    <div class="article-entry marked-body" itemprop="articleBody">
-      
-        <h1 id="Lecture-5"><a href="#Lecture-5" class="headerlink" title="Lecture 5"></a>Lecture 5</h1><h2 id="Recap"><a href="#Recap" class="headerlink" title="Recap"></a>Recap</h2><h3 id="Searching-For-Letters"><a href="#Searching-For-Letters" class="headerlink" title="Searching For Letters"></a>Searching For Letters</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">char</span> daisy<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token function">strcpy</span><span class="token punctuation">(</span>daisy<span class="token punctuation">,</span> <span class="token string">"Daisy"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">char</span> <span class="token operator">*</span>letterA <span class="token operator">=</span> <span class="token function">strchr</span><span class="token punctuation">(</span>daisy<span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s\n"</span><span class="token punctuation">,</span> daisy<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//Daisy</span>
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s\n"</span><span class="token punctuation">,</span> letterA<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//aisy</span>
-
-<span class="token function">strrchr</span><span class="token punctuation">(</span>daisy<span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//last occurrence</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="Searching-For-Strings"><a href="#Searching-For-Strings" class="headerlink" title="Searching For Strings"></a>Searching For Strings</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">char</span> daisy<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token function">strcpy</span><span class="token punctuation">(</span>daisy<span class="token punctuation">,</span> <span class="token string">"Daisy Dog"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">char</span> <span class="token operator">*</span>substr <span class="token operator">=</span>  <span class="token function">strstr</span><span class="token punctuation">(</span>daisy<span class="token punctuation">,</span> <span class="token string">"Dog"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s\n"</span><span class="token punctuation">,</span> daisy<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//Daisy Dog</span>
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s\n"</span><span class="token punctuation">,</span> substr<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// Dog</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="String-Spans"><a href="#String-Spans" class="headerlink" title="String Spans"></a>String Spans</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">char</span> daisy<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token function">strcpy</span><span class="token punctuation">(</span>daisy<span class="token punctuation">,</span> <span class="token string">"Daisy Dog"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">int</span> spanLength <span class="token operator">=</span> <span class="token function">strspn</span><span class="token punctuation">(</span>daisy<span class="token punctuation">,</span> <span class="token string">"aDeoi"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<blockquote>
-<p>How many places can we go in the first string before I encounter a character <strong>not in</strong> the second string?</p>
-</blockquote>
-<pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">char</span> daisy<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token function">strcpy</span><span class="token punctuation">(</span>daisy<span class="token punctuation">,</span> <span class="token string">"Daisy Dog"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">int</span> spanLength <span class="token operator">=</span> <span class="token function">strspn</span><span class="token punctuation">(</span>daisy<span class="token punctuation">,</span> <span class="token string">"driso"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//2</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<blockquote>
-<p>How many places can we go in the first string before I encounter a character <strong>in</strong> the second string?</p>
-</blockquote>
-<h3 id="C-Strings-As-Parameters"><a href="#C-Strings-As-Parameters" class="headerlink" title="C Strings As Parameters"></a>C Strings As Parameters</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span>str<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-
-<span class="token punctuation">}</span>
-
-<span class="token keyword">int</span> <span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token keyword">char</span> str<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="Array-of-Strings"><a href="#Array-of-Strings" class="headerlink" title="Array of Strings"></a>Array of Strings</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">char</span> <span class="token operator">*</span>stringArray<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-<span class="token keyword">char</span> <span class="token operator">*</span>stringArray<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
-    string1<span class="token punctuation">,</span>
-    string2<span class="token punctuation">,</span>
-    string3
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-      
-    </div>
-
-  </article>
-  
+      <section class="panel panel-default b-no">
+        <div class="panel-heading" role="tab">
+          <h3 class="panel-title">
+            <a data-toggle="collapse" href="#collapse2020" aria-expanded="true">
+              <i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>
+              2020
+            </a>
+            <!-- <a href="/archives/2020" class="archive-year">2020</a> -->
+          </h3>
+        </div>
+        <div id="collapse2020" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2020">
+        <div class="panel-body">
+          <div class="collection">
     
-  <section id="comments">
-  	
-      <div id="vcomments"></div>
     
-  </section>
+<a href="/2020/01/05/C%20Generics/" class="collection-item" target="_blank" itemprop="url">
+  <time datetime="2020-01-05T05:57:21.000Z" itemprop="datePublished">2020-01-05</time>
+  <span>&nbsp;&nbsp;&nbsp;</span> C Generics
+</a>
 
 
   
-</div>
-
-  <nav class="bar bar-footer clearfix" data-stick-bottom>
-  <div class="bar-inner">
   
-  <ul class="pager pull-left">
-    
-    <li class="prev">
-      <a href="/2020/01/05/C%20Generics/" title="C Generics"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
-    </li>
-    
-    
-    <li class="next">
-      <a href="/2019/11/14/Stanford%20CS%20107/Lecture%204/Lecture%204/" title="CS107 Lecture 4"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
-    </li>
-    
-    
-  </ul>
-  
-  
-  
-  <div class="bar-right">
-    
-    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
-    
-  </div>
-  </div>
-</nav>
+    </div></div></div></section>
   
 
-
+	    </div>
+  	</article>
+  	 	
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -480,37 +395,6 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
-
-   
-
-
-
-
-   
-    
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/valine"></script>
-  <script type="text/javascript">
-  var GUEST = ['nick', 'mail', 'link'];
-  var meta = 'nick,mail,link';
-  meta = meta.split(',').filter(function(item) {
-    return GUEST.indexOf(item) > -1;
-  });
-  new Valine({
-    el: '#vcomments',
-    verify: false,
-    notify: false,
-    appId: 'xqFWO5a06ueoeQoah9lmTucy-gzGzoHsz',
-    appKey: 'VQTcQIQV55vlxv88fuu4zFOc',
-    placeholder: 'Just go go',
-    avatar: 'mm',
-    meta: meta,
-    pageSize: '10' || 10,
-    visitor: false
-  });
-  </script>
-
-     
 
 
 

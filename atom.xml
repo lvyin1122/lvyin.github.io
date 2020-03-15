@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lvyin1122.github.io/"/>
-  <updated>2020-02-29T09:44:45.041Z</updated>
+  <updated>2020-03-15T08:52:57.158Z</updated>
   <id>http://lvyin1122.github.io/</id>
   
   <author>
@@ -15,6 +15,115 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Perceptron Algorithm</title>
+    <link href="http://lvyin1122.github.io/2020/03/12/Perceptron/"/>
+    <id>http://lvyin1122.github.io/2020/03/12/Perceptron/</id>
+    <published>2020-03-12T08:51:56.000Z</published>
+    <updated>2020-03-15T08:52:57.158Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Implementation-of-Perceptron-Algorithm&quot;&gt;&lt;a href=&quot;#Implementation-of-Perceptron-Algorithm&quot; class=&quot;headerlink&quot; title=&quot;Implementation
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Notes" scheme="http://lvyin1122.github.io/categories/Notes/"/>
+    
+    
+      <category term="Data Mining" scheme="http://lvyin1122.github.io/tags/Data-Mining/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>A Brief Introduction to NLTK</title>
+    <link href="http://lvyin1122.github.io/2020/03/05/An%20Brief%20Introduction%20to%20NLTK/"/>
+    <id>http://lvyin1122.github.io/2020/03/05/An Brief Introduction to NLTK/</id>
+    <published>2020-03-05T12:13:12.000Z</published>
+    <updated>2020-03-15T11:21:32.894Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;NLTK-Basics&quot;&gt;&lt;a href=&quot;#NLTK-Basics&quot; class=&quot;headerlink&quot; title=&quot;NLTK Basics&quot;&gt;&lt;/a&gt;NLTK Basics&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Natural language toolkit
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Notes" scheme="http://lvyin1122.github.io/categories/Notes/"/>
+    
+    
+      <category term="NLP" scheme="http://lvyin1122.github.io/tags/NLP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Concurrency Control</title>
+    <link href="http://lvyin1122.github.io/2020/02/10/Concurrency%20Control/"/>
+    <id>http://lvyin1122.github.io/2020/02/10/Concurrency Control/</id>
+    <published>2020-02-10T05:48:17.000Z</published>
+    <updated>2020-03-15T08:45:08.989Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Concurrency-Control&quot;&gt;&lt;a href=&quot;#Concurrency-Control&quot; class=&quot;headerlink&quot; title=&quot;Concurrency Control&quot;&gt;&lt;/a&gt;Concurrency Control&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Notes" scheme="http://lvyin1122.github.io/categories/Notes/"/>
+    
+    
+      <category term="Operating Systems" scheme="http://lvyin1122.github.io/tags/Operating-Systems/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C Generics</title>
+    <link href="http://lvyin1122.github.io/2020/01/05/C%20Generics/"/>
+    <id>http://lvyin1122.github.io/2020/01/05/C Generics/</id>
+    <published>2020-01-05T05:57:21.000Z</published>
+    <updated>2020-03-15T07:17:50.490Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;C-Generics-Function-Pointers&quot;&gt;&lt;a href=&quot;#C-Generics-Function-Pointers&quot; class=&quot;headerlink&quot; title=&quot;C Generics - Function
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Notes" scheme="http://lvyin1122.github.io/categories/Notes/"/>
+    
+    
+      <category term="C/C++" scheme="http://lvyin1122.github.io/tags/C-C/"/>
+    
+  </entry>
   
   <entry>
     <title>CS107 Lecture 5</title>
@@ -126,10 +235,64 @@
   
   <entry>
     <title>CS107 Lecture 1</title>
+    <link href="http://lvyin1122.github.io/2019/11/10/Stanford%20CS%20107/Lecture%201/"/>
+    <id>http://lvyin1122.github.io/2019/11/10/Stanford CS 107/Lecture 1/</id>
+    <published>2019-11-10T02:39:11.000Z</published>
+    <updated>2020-02-29T10:49:52.331Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Lecture-1&quot;&gt;&lt;a href=&quot;#Lecture-1&quot; class=&quot;headerlink&quot; title=&quot;Lecture 1&quot;&gt;&lt;/a&gt;Lecture 1&lt;/h1&gt;&lt;h2 id=&quot;What-is-Unix&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Notes" scheme="http://lvyin1122.github.io/categories/Notes/"/>
+    
+    
+      <category term="Stanford" scheme="http://lvyin1122.github.io/tags/Stanford/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CS107 Lecture 1</title>
     <link href="http://lvyin1122.github.io/2019/11/10/Stanford%20CS%20107/Lecture%201/CS107%20Lecture%201/"/>
     <id>http://lvyin1122.github.io/2019/11/10/Stanford CS 107/Lecture 1/CS107 Lecture 1/</id>
     <published>2019-11-10T02:39:11.000Z</published>
     <updated>2020-02-29T09:37:42.196Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Lecture-1&quot;&gt;&lt;a href=&quot;#Lecture-1&quot; class=&quot;headerlink&quot; title=&quot;Lecture 1&quot;&gt;&lt;/a&gt;Lecture 1&lt;/h1&gt;&lt;h2 id=&quot;What-is-Unix&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Notes" scheme="http://lvyin1122.github.io/categories/Notes/"/>
+    
+    
+      <category term="Stanford" scheme="http://lvyin1122.github.io/tags/Stanford/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CS107 Lecture 1</title>
+    <link href="http://lvyin1122.github.io/2019/11/10/Stanford%20CS%20107/Lecture%201/Lecture%201/"/>
+    <id>http://lvyin1122.github.io/2019/11/10/Stanford CS 107/Lecture 1/Lecture 1/</id>
+    <published>2019-11-10T02:39:11.000Z</published>
+    <updated>2020-02-29T10:48:42.387Z</updated>
     
     <summary type="html">
     

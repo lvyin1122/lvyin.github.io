@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>A Brief Introduction to NLTK | Lvyin&#39;s Blog</title>
+  <meta name="description" content="NLTK Basics Natural language toolkit (NLTK) Apache OpenNLP…  Setuppip install nltk import nltk nltk.download() showing info https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;nltk&#x2F;nltk_data&#x2F;gh-pages&#x2F;index.xml      Tru">
+<meta name="keywords" content="NLP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A Brief Introduction to NLTK">
+<meta property="og:url" content="http:&#x2F;&#x2F;lvyin1122.github.io&#x2F;2020&#x2F;03&#x2F;05&#x2F;An%20Brief%20Introduction%20to%20NLTK&#x2F;index.html">
+<meta property="og:site_name" content="Lvyin&#39;s Blog">
+<meta property="og:description" content="NLTK Basics Natural language toolkit (NLTK) Apache OpenNLP…  Setuppip install nltk import nltk nltk.download() showing info https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;nltk&#x2F;nltk_data&#x2F;gh-pages&#x2F;index.xml      Tru">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-03-15T11:21:32.894Z">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://lvyin1122.github.io/2020/03/05/An%20Brief%20Introduction%20to%20NLTK/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="Lvyin&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+  
+  
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+<body class="main-center theme-blue" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/lvyin1122" target="_blank">
+          <img class="img-circle img-rotate" src="/images/myLogo.PNG" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">LvyIN</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Software Engineer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Beijing, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form" method="GET" action="https://cn.bing.com/search">
+	<div class="input-group">
+    	<input name="wd" type="text" class="form-control search-form-input" placeholder="Search" />
+	    <span class="input-group-btn">
+	    	<button type="submit" class=" btn btn-flat search-form-submit"><i class="icon icon-search"></i></button>
+	    </span>
+    </div>
+</form>
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav menu-highlight">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">Home</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">Archives</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">Tags</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">Repository</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-books">
+          <a href="/books">
+            
+            <i class="icon icon-book-fill"></i>
+            
+            <span class="menu-title">Books</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">Links</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/lvyin1122" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/Backborne" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com/" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.behance.net/" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">Board</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p> E-mail&#58 khiwhyzqd@outlook.com <br/> QQ&#58 1070989449 <br/> WeChat&#58 stonagwang </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Notes/">Notes</a><span class="category-list-count">11</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-C/" rel="tag">C/C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data-Mining/" rel="tag">Data Mining</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NLP/" rel="tag">NLP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Operating-Systems/" rel="tag">Operating Systems</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Stanford/" rel="tag">Stanford</a><span class="tag-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/C-C/" style="font-size: 13px;">C/C++</a> <a href="/tags/Data-Mining/" style="font-size: 13px;">Data Mining</a> <a href="/tags/NLP/" style="font-size: 13px;">NLP</a> <a href="/tags/Operating-Systems/" style="font-size: 13px;">Operating Systems</a> <a href="/tags/Stanford/" style="font-size: 14px;">Stanford</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Archive</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Notes/">Notes</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/03/12/Perceptron/" class="title">Perceptron Algorithm</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-03-12T08:51:56.000Z" itemprop="datePublished">2020-03-12</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Notes/">Notes</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/03/05/An%20Brief%20Introduction%20to%20NLTK/" class="title">A Brief Introduction to NLTK</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-03-05T12:13:12.000Z" itemprop="datePublished">2020-03-05</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Notes/">Notes</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/02/10/Concurrency%20Control/" class="title">Concurrency Control</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-02-10T05:48:17.000Z" itemprop="datePublished">2020-02-10</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Notes/">Notes</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/01/05/C%20Generics/" class="title">C Generics</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-01-05T05:57:21.000Z" itemprop="datePublished">2020-01-05</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Notes/">Notes</a>
+              </p>
+              <p class="item-title">
+                <a href="/2019/11/21/Stanford%20CS%20107/Lecture%205/Lecture%205/" class="title">CS107 Lecture 5</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-11-20T23:19:31.000Z" itemprop="datePublished">2019-11-21</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-An Brief Introduction to NLTK" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      A Brief Introduction to NLTK
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/03/05/An%20Brief%20Introduction%20to%20NLTK/" class="article-date">
+	  <time datetime="2020-03-05T12:13:12.000Z" itemprop="datePublished">2020-03-05</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/Notes/">Notes</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/NLP/" rel="tag">NLP</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/03/05/An%20Brief%20Introduction%20to%20NLTK/#comments" class="article-comment-link">Comments</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h1 id="NLTK-Basics"><a href="#NLTK-Basics" class="headerlink" title="NLTK Basics"></a>NLTK Basics</h1><ul>
+<li>Natural language toolkit (NLTK)</li>
+<li>Apache OpenNLP<br>…</li>
+</ul>
+<h2 id="Setup"><a href="#Setup" class="headerlink" title="Setup"></a>Setup</h2><pre class="line-numbers language-python"><code class="language-python">pip install nltk<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> nltk<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python">nltk<span class="token punctuation">.</span>download<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>showing info https://raw.githubusercontent.com/nltk/nltk_data/gh-pages/index.xml
+
+
+
+
+
+True</code></pre><h2 id="Python-Tokenize"><a href="#Python-Tokenize" class="headerlink" title="Python Tokenize"></a>Python Tokenize</h2><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> urllib<span class="token punctuation">.</span>request
+
+response <span class="token operator">=</span> urllib<span class="token punctuation">.</span>request<span class="token punctuation">.</span>urlopen<span class="token punctuation">(</span><span class="token string">'https://www.chinadaily.com.cn/a/202003/13/WS5e5ae390a31012821727b4ba.html'</span><span class="token punctuation">)</span>
+html <span class="token operator">=</span> response<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup
+
+soup <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>html<span class="token punctuation">,</span> <span class="token string">"html5lib"</span><span class="token punctuation">)</span>
+
+text <span class="token operator">=</span> soup<span class="token punctuation">.</span>get_text<span class="token punctuation">(</span>strip<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python">tokens <span class="token operator">=</span> text<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>tokens<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="Frequency"><a href="#Frequency" class="headerlink" title="Frequency"></a>Frequency</h2><pre class="line-numbers language-python"><code class="language-python">freq <span class="token operator">=</span> nltk<span class="token punctuation">.</span>FreqDist<span class="token punctuation">(</span>tokens<span class="token punctuation">)</span>
+<span class="token keyword">for</span> key<span class="token punctuation">,</span> val <span class="token keyword">in</span> freq<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>str<span class="token punctuation">(</span>key<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">':'</span> <span class="token operator">+</span> str<span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> matplotlib
+freq<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre><code>FreqDist({&#39;in&#39;: 109, &#39;(Read&#39;: 107, &#39;of&#39;: 96, &#39;the&#39;: 87, &#39;more)-&#39;: 80, &#39;to&#39;: 73, &#39;coronavirus&#39;: 70, &#39;on&#39;: 48, &#39;a&#39;: 45, &#39;new&#39;: 44, ...})</code></pre><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> nltk<span class="token punctuation">.</span>corpus <span class="token keyword">import</span> stopwords
+
+stopwords<span class="token punctuation">.</span>words<span class="token punctuation">(</span><span class="token string">'english'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python">clean_tokens <span class="token operator">=</span> list<span class="token punctuation">(</span><span class="token punctuation">)</span>
+sr <span class="token operator">=</span> stopwords<span class="token punctuation">.</span>words<span class="token punctuation">(</span><span class="token string">'english'</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> token <span class="token keyword">in</span> tokens<span class="token punctuation">:</span>
+    <span class="token keyword">if</span> token <span class="token operator">not</span> <span class="token keyword">in</span> sr<span class="token punctuation">:</span>
+        clean_tokens<span class="token punctuation">.</span>append<span class="token punctuation">(</span>token<span class="token punctuation">)</span>
+
+freq <span class="token operator">=</span> nltk<span class="token punctuation">.</span>FreqDist<span class="token punctuation">(</span>clean_tokens<span class="token punctuation">)</span>
+freq<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>FreqDist({&#39;(Read&#39;: 107, &#39;more)-&#39;: 80, &#39;coronavirus&#39;: 70, &#39;new&#39;: 44, &#39;cases&#39;: 36, &#39;novel&#39;: 33, &#39;March&#39;: 29, &#39;COVID-19&#39;: 29, &#39;=&#39;: 25, &#39;reports&#39;: 23, ...})</code></pre><h2 id="Tokenizer"><a href="#Tokenizer" class="headerlink" title="Tokenizer"></a>Tokenizer</h2><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> nltk<span class="token punctuation">.</span>tokenize <span class="token keyword">import</span> sent_tokenize
+
+myText <span class="token operator">=</span> <span class="token string">"Hello Mr. Adam, how are you? I hope everything is going well. Today is a good day, see you dude."</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>sent_tokenize<span class="token punctuation">(</span>myText<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>[&#39;Hello Mr. Adam, how are you?&#39;, &#39;I hope everything is going well.&#39;, &#39;Today is a good day, see you dude.&#39;]</code></pre><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> nltk<span class="token punctuation">.</span>tokenize <span class="token keyword">import</span> word_tokenize
+
+myText <span class="token operator">=</span> <span class="token string">"Hello Mr. Adam, how are you? I hope everything is going well. Today is a good day, see you dude."</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>word_tokenize<span class="token punctuation">(</span>myText<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>[&#39;Hello&#39;, &#39;Mr.&#39;, &#39;Adam&#39;, &#39;,&#39;, &#39;how&#39;, &#39;are&#39;, &#39;you&#39;, &#39;?&#39;, &#39;I&#39;, &#39;hope&#39;, &#39;everything&#39;, &#39;is&#39;, &#39;going&#39;, &#39;well&#39;, &#39;.&#39;, &#39;Today&#39;, &#39;is&#39;, &#39;a&#39;, &#39;good&#39;, &#39;day&#39;, &#39;,&#39;, &#39;see&#39;, &#39;you&#39;, &#39;dude&#39;, &#39;.&#39;]</code></pre><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> re<span class="token punctuation">,</span>string
+
+
+tokens <span class="token operator">=</span> word_tokenize<span class="token punctuation">(</span>text<span class="token punctuation">)</span>
+clean_tokens <span class="token operator">=</span> list<span class="token punctuation">(</span><span class="token punctuation">)</span>
+sr <span class="token operator">=</span> stopwords<span class="token punctuation">.</span>words<span class="token punctuation">(</span><span class="token string">'english'</span><span class="token punctuation">)</span>
+sr<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">'Read'</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> token <span class="token keyword">in</span> tokens<span class="token punctuation">:</span>
+    <span class="token keyword">if</span> token <span class="token operator">not</span> <span class="token keyword">in</span> sr <span class="token operator">and</span> token <span class="token operator">not</span> <span class="token keyword">in</span> string<span class="token punctuation">.</span>punctuation<span class="token punctuation">:</span>
+        clean_tokens<span class="token punctuation">.</span>append<span class="token punctuation">(</span>token<span class="token punctuation">)</span>
+
+freq <span class="token operator">=</span> nltk<span class="token punctuation">.</span>FreqDist<span class="token punctuation">(</span>clean_tokens<span class="token punctuation">)</span>
+freq<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>FreqDist({&#39;coronavirus&#39;: 76, &#39;new&#39;: 44, &#39;cases&#39;: 41, &#39;March&#39;: 40, &#39;Hubei&#39;: 37, &#39;COVID-19&#39;: 34, &#39;novel&#39;: 33, &quot;&#39;&#39;&quot;: 30, &quot;&#39;s&quot;: 28, &#39;China&#39;: 24, ...})</code></pre><h2 id="WordNet"><a href="#WordNet" class="headerlink" title="WordNet"></a>WordNet</h2><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> nltk<span class="token punctuation">.</span>corpus <span class="token keyword">import</span> wordnet
+
+wordnet<span class="token punctuation">.</span>synsets<span class="token punctuation">(</span><span class="token string">'happy'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre><code>[Synset(&#39;happy.a.01&#39;),
+ Synset(&#39;felicitous.s.02&#39;),
+ Synset(&#39;glad.s.02&#39;),
+ Synset(&#39;happy.s.04&#39;)]</code></pre><pre class="line-numbers language-python"><code class="language-python">wordnet<span class="token punctuation">.</span>synset<span class="token punctuation">(</span><span class="token string">'happy.a.01'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>definition<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>&#39;enjoying or showing or marked by joy or pleasure&#39;</code></pre><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> nltk<span class="token punctuation">.</span>corpus <span class="token keyword">import</span> wordnet
+
+syn <span class="token operator">=</span> wordnet<span class="token punctuation">.</span>synsets<span class="token punctuation">(</span><span class="token string">'pain'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>syn<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>definition<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>syn<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>examples<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>a symptom of some physical hurt or disorder
+[&#39;the patient developed severe pain and distension&#39;]</code></pre><pre class="line-numbers language-python"><code class="language-python">syn <span class="token operator">=</span> wordnet<span class="token punctuation">.</span>synsets<span class="token punctuation">(</span><span class="token string">'angry'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>syn<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>definition<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre><code>feeling or showing anger</code></pre><pre class="line-numbers language-python"><code class="language-python">wordnet<span class="token punctuation">.</span>synsets<span class="token punctuation">(</span><span class="token string">'must'</span><span class="token punctuation">)</span>
+wordnet<span class="token punctuation">.</span>synsets<span class="token punctuation">(</span><span class="token string">'must'</span><span class="token punctuation">,</span> pos<span class="token operator">=</span>wordnet<span class="token punctuation">.</span>NOUN<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre><code>[Synset(&#39;must.n.01&#39;), Synset(&#39;must.n.02&#39;), Synset(&#39;mustiness.n.01&#39;)]</code></pre><h3 id="Lemmas"><a href="#Lemmas" class="headerlink" title="Lemmas"></a>Lemmas</h3><pre class="line-numbers language-python"><code class="language-python">wordnet<span class="token punctuation">.</span>synsets<span class="token punctuation">(</span><span class="token string">'publish'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>lemmas<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>[Lemma(&#39;print.v.01.print&#39;), Lemma(&#39;print.v.01.publish&#39;)]</code></pre><pre class="line-numbers language-python"><code class="language-python"><span class="token punctuation">[</span>str<span class="token punctuation">(</span>k<span class="token punctuation">.</span>name<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">for</span> k <span class="token keyword">in</span> wordnet<span class="token punctuation">.</span>synsets<span class="token punctuation">(</span><span class="token string">'publish'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>lemmas<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>[&#39;print&#39;, &#39;publish&#39;]</code></pre><pre class="line-numbers language-python"><code class="language-python">wordnet<span class="token punctuation">.</span>synsets<span class="token punctuation">(</span><span class="token string">'publish'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>lemmas<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>39</code></pre><pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># Similarity</span>
+wordnet<span class="token punctuation">.</span>synsets<span class="token punctuation">(</span><span class="token string">'beautiful'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+wordnet<span class="token punctuation">.</span>synsets<span class="token punctuation">(</span><span class="token string">'good'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre><code>Synset(&#39;good.n.01&#39;)</code></pre><h3 id="Listing"><a href="#Listing" class="headerlink" title="Listing"></a>Listing</h3><pre class="line-numbers language-python"><code class="language-python">synonyms <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> syn <span class="token keyword">in</span> wordnet<span class="token punctuation">.</span>synsets<span class="token punctuation">(</span><span class="token string">'love'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> lemma <span class="token keyword">in</span> syn<span class="token punctuation">.</span>lemmas<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        synonyms<span class="token punctuation">.</span>append<span class="token punctuation">(</span>lemma<span class="token punctuation">.</span>name<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>synonyms<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>[&#39;love&#39;, &#39;love&#39;, &#39;passion&#39;, &#39;beloved&#39;, &#39;dear&#39;, &#39;dearest&#39;, &#39;honey&#39;, &#39;love&#39;, &#39;love&#39;, &#39;sexual_love&#39;, &#39;erotic_love&#39;, &#39;love&#39;, &#39;sexual_love&#39;, &#39;lovemaking&#39;, &#39;making_love&#39;, &#39;love&#39;, &#39;love_life&#39;, &#39;love&#39;, &#39;love&#39;, &#39;enjoy&#39;, &#39;love&#39;, &#39;sleep_together&#39;, &#39;roll_in_the_hay&#39;, &#39;love&#39;, &#39;make_out&#39;, &#39;make_love&#39;, &#39;sleep_with&#39;, &#39;get_laid&#39;, &#39;have_sex&#39;, &#39;know&#39;, &#39;do_it&#39;, &#39;be_intimate&#39;, &#39;have_intercourse&#39;, &#39;have_it_away&#39;, &#39;have_it_off&#39;, &#39;screw&#39;, &#39;fuck&#39;, &#39;jazz&#39;, &#39;eff&#39;, &#39;hump&#39;, &#39;lie_with&#39;, &#39;bed&#39;, &#39;have_a_go_at_it&#39;, &#39;bang&#39;, &#39;get_it_on&#39;, &#39;bonk&#39;]</code></pre><pre class="line-numbers language-python"><code class="language-python">antonyms <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> syn <span class="token keyword">in</span> wordnet<span class="token punctuation">.</span>synsets<span class="token punctuation">(</span><span class="token string">'cold'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> l <span class="token keyword">in</span> syn<span class="token punctuation">.</span>lemmas<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> l<span class="token punctuation">.</span>antonyms<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            antonyms<span class="token punctuation">.</span>append<span class="token punctuation">(</span>l<span class="token punctuation">.</span>antonyms<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>antonyms<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>[&#39;hotness&#39;, &#39;hot&#39;, &#39;hot&#39;]</code></pre><h2 id="PorterStemmer"><a href="#PorterStemmer" class="headerlink" title="PorterStemmer"></a>PorterStemmer</h2><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> nltk<span class="token punctuation">.</span>stem <span class="token keyword">import</span> PorterStemmer
+
+stemmer <span class="token operator">=</span> PorterStemmer<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>stemmer<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">'catching'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>stemmer<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">'catched'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>stemmer<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">'taught'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>catch
+catch
+taught</code></pre><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>stemmer<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">'increases'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>stemmer<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">'increased'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>stemmer<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">'increase'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre><code>increas
+increas
+increas</code></pre><pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># Another way</span>
+<span class="token keyword">from</span> nltk<span class="token punctuation">.</span>stem <span class="token keyword">import</span> WordNetLemmatizer
+
+lemmatizer <span class="token operator">=</span> WordNetLemmatizer<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>lemmatizer<span class="token punctuation">.</span>lemmatize<span class="token punctuation">(</span><span class="token string">'increases'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>increase</code></pre><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>lemmatizer<span class="token punctuation">.</span>lemmatize<span class="token punctuation">(</span><span class="token string">'excited'</span><span class="token punctuation">,</span> pos<span class="token operator">=</span><span class="token string">"v"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>excite</code></pre><pre class="line-numbers language-python"><code class="language-python">stemmer <span class="token operator">=</span> PorterStemmer<span class="token punctuation">(</span><span class="token punctuation">)</span>
+lemmatizer <span class="token operator">=</span> WordNetLemmatizer<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>stemmer<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">'stones'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>stemmer<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">'speaking'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>stemmer<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">'bedroom'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>stemmer<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">'jokes'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>stemmer<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">'lisa'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>stemmer<span class="token punctuation">.</span>stem<span class="token punctuation">(</span><span class="token string">'purple'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'----------------------'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>lemmatizer<span class="token punctuation">.</span>lemmatize<span class="token punctuation">(</span><span class="token string">'stones'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>lemmatizer<span class="token punctuation">.</span>lemmatize<span class="token punctuation">(</span><span class="token string">'speaking'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>lemmatizer<span class="token punctuation">.</span>lemmatize<span class="token punctuation">(</span><span class="token string">'bedroom'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>lemmatizer<span class="token punctuation">.</span>lemmatize<span class="token punctuation">(</span><span class="token string">'jokes'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>lemmatizer<span class="token punctuation">.</span>lemmatize<span class="token punctuation">(</span><span class="token string">'lisa'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>lemmatizer<span class="token punctuation">.</span>lemmatize<span class="token punctuation">(</span><span class="token string">'purple'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>stone
+speak
+bedroom
+joke
+lisa
+purpl
+----------------------
+stone
+speaking
+bedroom
+joke
+lisa
+purple</code></pre>
+      
+    </div>
+
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2020/03/12/Perceptron/" title="Perceptron Algorithm"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2020/02/10/Concurrency%20Control/" title="Concurrency Control"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/lvyin1122" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/Backborne" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com/" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.behance.net/" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script src="/js/plugin.min.js"></script>
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function ($) {
+    $('.search-form').on('submit', function (e) {
+        var keyword = $('.search-form-input[name="wd"]').val();
+        window.location = 'https://www.baidu.com/s?wd=site:lvyin1122.github.io ' + keyword;
+        return false;
+    });
+})(jQuery);
+</script>
+
+
+
+
+   
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: 'xqFWO5a06ueoeQoah9lmTucy-gzGzoHsz',
+    appKey: 'VQTcQIQV55vlxv88fuu4zFOc',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+
+
+
+
+</body>
+</html>

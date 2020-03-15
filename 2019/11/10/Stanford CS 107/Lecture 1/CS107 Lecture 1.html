@@ -1,0 +1,94 @@
+<hr>
+<p>title: CS107 Lecture 1<br>date: 2019-11-10 10:39:11<br>tags: Stanford<br>categories: Notes</p>
+<hr>
+<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><h2 id="What-is-Unix"><a href="#What-is-Unix" class="headerlink" title="What is Unix"></a>What is Unix</h2><p>a set of standards and tools commonly used in software development.</p>
+<h3 id="Command-line"><a href="#Command-line" class="headerlink" title="Command-line"></a>Command-line</h3><pre><code class="shell">cd
+ls
+mkdir
+emacs
+rm
+man</code></pre>
+<h2 id="C-Programming"><a href="#C-Programming" class="headerlink" title="C Programming"></a>C Programming</h2><pre><code class="c"><span class="comment">/*</span>
+<span class="comment"> * hello.c</span>
+<span class="comment"> * This program prints a welcome message</span>
+<span class="comment"> * to the user.</span>
+<span class="comment"> */</span>
+<span class="comment">//Import statements</span>
+<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt; //for printf</span></span>
+
+<span class="comment">//Main function</span>
+<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>{<span class="comment">//Main parameters</span>
+
+    <span class="keyword">bool</span> b = <span class="literal">true</span>;
+
+    <span class="built_in">printf</span>(<span class="string">"Hello, world!\n"</span>);
+
+    <span class="built_in">printf</span>(<span class="string">"You are in %s%d"</span>, <span class="string">"CS"</span>, <span class="number">161</span>); <span class="comment">//Placeholder</span>
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+<h2 id="Writing-Debugging-and-Compiling"><a href="#Writing-Debugging-and-Compiling" class="headerlink" title="Writing, Debugging and Compiling"></a>Writing, Debugging and Compiling</h2><p>emacs</p>
+<p>make</p>
+<p>gdb</p>
+<p>valgrind</p>
+<h2 id="B-amp-O-Ch-1"><a href="#B-amp-O-Ch-1" class="headerlink" title="B&amp;O Ch.1"></a>B&amp;O Ch.1</h2><h3 id="1-1-Information-Is-Bits-Context"><a href="#1-1-Information-Is-Bits-Context" class="headerlink" title="1.1 Information Is Bits + Context"></a>1.1 Information Is Bits + Context</h3><p>newline character</p>
+<h3 id="1-2-Translate-to-Different-Forms"><a href="#1-2-Translate-to-Different-Forms" class="headerlink" title="1.2 Translate to Different Forms"></a>1.2 Translate to Different Forms</h3><p>to machine-level to executable object program</p>
+<h4 id="Compilation-system"><a href="#Compilation-system" class="headerlink" title="Compilation system"></a>Compilation system</h4><ul>
+<li>preprocessor</li>
+<li>compiler</li>
+<li>assembler</li>
+<li>linker</li>
+</ul>
+<p><img src="D:%5Chexo%5Csource_posts%5C1579311666264.png" alt="1579311666264"></p>
+<h3 id="1-3-Why-should-we-know-compilation-system"><a href="#1-3-Why-should-we-know-compilation-system" class="headerlink" title="1.3 Why should we know compilation system"></a>1.3 Why should we know compilation system</h3><h4 id="Optimizing-program-performance"><a href="#Optimizing-program-performance" class="headerlink" title="Optimizing program performance**"></a>Optimizing program performance**</h4><h4 id="Understanding-link-time-errors"><a href="#Understanding-link-time-errors" class="headerlink" title="Understanding link-time errors"></a>Understanding link-time errors</h4><h4 id="Avoiding-security-holes"><a href="#Avoiding-security-holes" class="headerlink" title="Avoiding security holes"></a>Avoiding security holes</h4><p>buffer overflow vulnerabilities</p>
+<h3 id="1-4-Processors-Read-and-Interpret-Instructions-Stored-in-Memory"><a href="#1-4-Processors-Read-and-Interpret-Instructions-Stored-in-Memory" class="headerlink" title="1.4 Processors Read and Interpret Instructions Stored in Memory"></a>1.4 Processors Read and Interpret Instructions Stored in Memory</h3><h4 id="1-4-1-Hardware-Organization-of-a-System"><a href="#1-4-1-Hardware-Organization-of-a-System" class="headerlink" title="1.4.1 Hardware Organization of a System"></a>1.4.1 Hardware Organization of a System</h4><p>{% asset_img 1580346667412.png %}</p>
+<h5 id="Buses"><a href="#Buses" class="headerlink" title="Buses"></a>Buses</h5><p>Transfer fixed-sized chunks of bytes known as words</p>
+<p><strong>The number of bytes in a word</strong></p>
+<p>4 bytes - 32 bits</p>
+<p>8 bytes - 64 bits</p>
+<h5 id="I-O-Devices"><a href="#I-O-Devices" class="headerlink" title="I/O Devices"></a>I/O Devices</h5><p>Controller</p>
+<p>Adapter - plugs into a slot on the motherboard</p>
+<p>motherboard: main printed circuit board</p>
+<h5 id="Main-Memory"><a href="#Main-Memory" class="headerlink" title="Main Memory"></a>Main Memory</h5><p>temporary storage device</p>
+<p>A collection of <strong>dynamic random access memory</strong> (<strong>DRAM</strong>)</p>
+<p>Linear array of bytes</p>
+<h5 id="Processor"><a href="#Processor" class="headerlink" title="Processor"></a>Processor</h5><p>central processing unit (CPU)</p>
+<p>Core: <strong>PC</strong></p>
+<p>word-sized storage device (<em>register</em>)</p>
+<p>PC: program counter (a register)</p>
+<ul>
+<li>Read</li>
+<li>Interpret</li>
+<li>Perform</li>
+<li>Update</li>
+</ul>
+<p>Instruction set architecture</p>
+<p>register file</p>
+<p>arithmetic/logic unit (ALU)</p>
+<p>CPU:</p>
+<ul>
+<li>Load</li>
+<li>Store</li>
+<li>Operate</li>
+<li>Jump</li>
+</ul>
+<h3 id="1-5-Caches-Matter"><a href="#1-5-Caches-Matter" class="headerlink" title="1.5 Caches Matter"></a>1.5 Caches Matter</h3><p>A major goal: make copy operations faster</p>
+<p>processor-memory gap</p>
+<p>To deal with it: cache memories</p>
+<p>L1 L2 L3 cache</p>
+<p>static random access memory(SRAM)</p>
+<p><em>locality</em></p>
+<h3 id="1-6-Storage-Devices-Form-a-Hierarchy"><a href="#1-6-Storage-Devices-Form-a-Hierarchy" class="headerlink" title="1.6 Storage Devices Form a Hierarchy"></a>1.6 Storage Devices Form a Hierarchy</h3><h4 id="Memory-Hierarchy"><a href="#Memory-Hierarchy" class="headerlink" title="Memory Hierarchy"></a>Memory Hierarchy</h4><p>Cache for the next level</p>
+<p><img src="D:%5Chexo%5Csource_posts%5C1580567851938.png" alt="1580567851938"></p>
+<h3 id="1-7-The-Operating-System-Manages-the-Hardware"><a href="#1-7-The-Operating-System-Manages-the-Hardware" class="headerlink" title="1.7 The Operating System Manages the Hardware"></a>1.7 The Operating System Manages the Hardware</h3><p>a layer of software interposed between the application program the hardware</p>
+<p><img src="D:%5Chexo%5Csource_posts%5C1580567981063.png" alt="1580567981063"></p>
+<p><img src="D:%5Chexo%5Csource_posts%5C1580607895485.png" alt="1580607895485"></p>
+<h4 id="Processes"><a href="#Processes" class="headerlink" title="Processes"></a>Processes</h4><p>Operating system’s abstraction for a running program.</p>
+<p>Concurrency</p>
+<p>Context switching</p>
+<h4 id="Threads"><a href="#Threads" class="headerlink" title="Threads"></a>Threads</h4><p>The requirement for concurrency in network servers</p>
+<h4 id="Virtual-Memory-Unix"><a href="#Virtual-Memory-Unix" class="headerlink" title="Virtual Memory (Unix)"></a>Virtual Memory (Unix)</h4><p><img src="D:%5Chexo%5Csource_posts%5C1580618309172.png" alt="1580618309172"></p>
+<h5 id="Program-code-and-data"><a href="#Program-code-and-data" class="headerlink" title="Program code and data"></a>Program code and data</h5><h5 id="Heap"><a href="#Heap" class="headerlink" title="Heap"></a>Heap</h5><h5 id="Shared-libraries"><a href="#Shared-libraries" class="headerlink" title="Shared libraries"></a>Shared libraries</h5><h5 id="Stack"><a href="#Stack" class="headerlink" title="Stack"></a>Stack</h5><h5 id="Kernel-virtual-memory"><a href="#Kernel-virtual-memory" class="headerlink" title="Kernel virtual memory"></a>Kernel virtual memory</h5><h4 id="Files"><a href="#Files" class="headerlink" title="Files"></a>Files</h4><p>A sequence of bytes.</p>
+<h3 id="1-8-Systems-Communicate-with-Other-Systems-Using-Networks"><a href="#1-8-Systems-Communicate-with-Other-Systems-Using-Networks" class="headerlink" title="1.8 Systems Communicate with Other Systems Using Networks"></a>1.8 Systems Communicate with Other Systems Using Networks</h3><p>telnet</p>
+<p>clients and servers</p>
+<h3 id="1-9-Important-Themes"><a href="#1-9-Important-Themes" class="headerlink" title="1.9 Important Themes"></a>1.9 Important Themes</h3><h4 id="Concurrency-and-Parallelism"><a href="#Concurrency-and-Parallelism" class="headerlink" title="Concurrency and Parallelism"></a>Concurrency and Parallelism</h4><h5 id="Thread-Level-Concurrency"><a href="#Thread-Level-Concurrency" class="headerlink" title="Thread-Level Concurrency"></a>Thread-Level Concurrency</h5><h5 id="Instruction-Level-Parallelism"><a href="#Instruction-Level-Parallelism" class="headerlink" title="Instruction-Level Parallelism"></a>Instruction-Level Parallelism</h5><h5 id="Single-Instruction-Multiple-Data-SIMD-Parallelism"><a href="#Single-Instruction-Multiple-Data-SIMD-Parallelism" class="headerlink" title="Single-Instruction, Multiple-Data (SIMD) Parallelism"></a>Single-Instruction, Multiple-Data (SIMD) Parallelism</h5><h4 id="The-Importance-of-Abstractions-in-Computer-Systems"><a href="#The-Importance-of-Abstractions-in-Computer-Systems" class="headerlink" title="The Importance of Abstractions in Computer Systems"></a>The Importance of Abstractions in Computer Systems</h4><p><img src="D:%5Chexo%5Csource_posts%5C1580631056814.png" alt="1580631056814"></p>

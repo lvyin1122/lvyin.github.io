@@ -17,19 +17,19 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>CS107 Lecture 5 | Lvyin&#39;s Blog</title>
-  <meta name="description" content="Lecture 5RecapSearching For Letterschar daisy[6]; strcpy(daisy, &quot;Daisy&quot;); char *letterA = strchr(daisy, &amp;apos;a&amp;apos;); printf(&quot;%s\n&quot;, daisy); &#x2F;&#x2F;Daisy printf(&quot;%s\n&quot;, letterA);&#x2F;&#x2F;aisy  strrchr(daisy, &amp;apos;a&amp;apos;); &#x2F;&#x2F;last">
-<meta name="keywords" content="Stanford">
+  <title>Concurrency Control | Lvyin&#39;s Blog</title>
+  <meta name="description" content="Concurrency ControlIntroprocesses:  share data executed in certain order  this will cause concurrency control problems Shared DataSynchronization of Concurrent processesProblems:  how to ensure shared">
+<meta name="keywords" content="Operating Systems">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CS107 Lecture 5">
-<meta property="og:url" content="http:&#x2F;&#x2F;lvyin1122.github.io&#x2F;2019&#x2F;11&#x2F;21&#x2F;Stanford%20CS%20107&#x2F;Lecture%205&#x2F;Lecture%205&#x2F;index.html">
+<meta property="og:title" content="Concurrency Control">
+<meta property="og:url" content="http:&#x2F;&#x2F;lvyin1122.github.io&#x2F;2020&#x2F;02&#x2F;10&#x2F;Concurrency%20Control&#x2F;index.html">
 <meta property="og:site_name" content="Lvyin&#39;s Blog">
-<meta property="og:description" content="Lecture 5RecapSearching For Letterschar daisy[6]; strcpy(daisy, &quot;Daisy&quot;); char *letterA = strchr(daisy, &amp;apos;a&amp;apos;); printf(&quot;%s\n&quot;, daisy); &#x2F;&#x2F;Daisy printf(&quot;%s\n&quot;, letterA);&#x2F;&#x2F;aisy  strrchr(daisy, &amp;apos;a&amp;apos;); &#x2F;&#x2F;last">
+<meta property="og:description" content="Concurrency ControlIntroprocesses:  share data executed in certain order  this will cause concurrency control problems Shared DataSynchronization of Concurrent processesProblems:  how to ensure shared">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-29T09:44:45.041Z">
+<meta property="og:updated_time" content="2020-03-15T08:45:08.989Z">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://lvyin1122.github.io/2019/11/21/Stanford%20CS%20107/Lecture%205/Lecture%205/index.html">
+  <link rel="canonical" href="http://lvyin1122.github.io/2020/02/10/Concurrency%20Control/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Lvyin&#39;s Blog" type="application/atom+xml">
   
@@ -312,14 +312,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-Stanford CS 107/Lecture 5/Lecture 5" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-Concurrency Control" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      CS107 Lecture 5
+      Concurrency Control
     </h1>
   
 
@@ -327,8 +327,8 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2019/11/21/Stanford%20CS%20107/Lecture%205/Lecture%205/" class="article-date">
-	  <time datetime="2019-11-20T23:19:31.000Z" itemprop="datePublished">2019-11-21</time>
+	<a href="/2020/02/10/Concurrency%20Control/" class="article-date">
+	  <time datetime="2020-02-10T05:48:17.000Z" itemprop="datePublished">2020-02-10</time>
 	</a>
 </span>
         
@@ -340,54 +340,97 @@
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/Stanford/" rel="tag">Stanford</a>
+	<a class="article-tag-link" href="/tags/Operating-Systems/" rel="tag">Operating Systems</a>
   </span>
 
 
         
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/11/21/Stanford%20CS%20107/Lecture%205/Lecture%205/#comments" class="article-comment-link">Comments</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/02/10/Concurrency%20Control/#comments" class="article-comment-link">Comments</a></span>
         
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h1 id="Lecture-5"><a href="#Lecture-5" class="headerlink" title="Lecture 5"></a>Lecture 5</h1><h2 id="Recap"><a href="#Recap" class="headerlink" title="Recap"></a>Recap</h2><h3 id="Searching-For-Letters"><a href="#Searching-For-Letters" class="headerlink" title="Searching For Letters"></a>Searching For Letters</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">char</span> daisy<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token function">strcpy</span><span class="token punctuation">(</span>daisy<span class="token punctuation">,</span> <span class="token string">"Daisy"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">char</span> <span class="token operator">*</span>letterA <span class="token operator">=</span> <span class="token function">strchr</span><span class="token punctuation">(</span>daisy<span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s\n"</span><span class="token punctuation">,</span> daisy<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//Daisy</span>
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s\n"</span><span class="token punctuation">,</span> letterA<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//aisy</span>
-
-<span class="token function">strrchr</span><span class="token punctuation">(</span>daisy<span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//last occurrence</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="Searching-For-Strings"><a href="#Searching-For-Strings" class="headerlink" title="Searching For Strings"></a>Searching For Strings</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">char</span> daisy<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token function">strcpy</span><span class="token punctuation">(</span>daisy<span class="token punctuation">,</span> <span class="token string">"Daisy Dog"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">char</span> <span class="token operator">*</span>substr <span class="token operator">=</span>  <span class="token function">strstr</span><span class="token punctuation">(</span>daisy<span class="token punctuation">,</span> <span class="token string">"Dog"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s\n"</span><span class="token punctuation">,</span> daisy<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//Daisy Dog</span>
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s\n"</span><span class="token punctuation">,</span> substr<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// Dog</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="String-Spans"><a href="#String-Spans" class="headerlink" title="String Spans"></a>String Spans</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">char</span> daisy<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token function">strcpy</span><span class="token punctuation">(</span>daisy<span class="token punctuation">,</span> <span class="token string">"Daisy Dog"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">int</span> spanLength <span class="token operator">=</span> <span class="token function">strspn</span><span class="token punctuation">(</span>daisy<span class="token punctuation">,</span> <span class="token string">"aDeoi"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<blockquote>
-<p>How many places can we go in the first string before I encounter a character <strong>not in</strong> the second string?</p>
-</blockquote>
-<pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">char</span> daisy<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token function">strcpy</span><span class="token punctuation">(</span>daisy<span class="token punctuation">,</span> <span class="token string">"Daisy Dog"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">int</span> spanLength <span class="token operator">=</span> <span class="token function">strspn</span><span class="token punctuation">(</span>daisy<span class="token punctuation">,</span> <span class="token string">"driso"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//2</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<blockquote>
-<p>How many places can we go in the first string before I encounter a character <strong>in</strong> the second string?</p>
-</blockquote>
-<h3 id="C-Strings-As-Parameters"><a href="#C-Strings-As-Parameters" class="headerlink" title="C Strings As Parameters"></a>C Strings As Parameters</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span>str<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-
-<span class="token punctuation">}</span>
-
-<span class="token keyword">int</span> <span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token keyword">char</span> str<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="Array-of-Strings"><a href="#Array-of-Strings" class="headerlink" title="Array of Strings"></a>Array of Strings</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">char</span> <span class="token operator">*</span>stringArray<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-<span class="token keyword">char</span> <span class="token operator">*</span>stringArray<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
-    string1<span class="token punctuation">,</span>
-    string2<span class="token punctuation">,</span>
-    string3
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        <h1 id="Concurrency-Control"><a href="#Concurrency-Control" class="headerlink" title="Concurrency Control"></a>Concurrency Control</h1><h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><p>processes:</p>
+<ul>
+<li>share data</li>
+<li>executed in certain order</li>
+</ul>
+<p>this will cause concurrency control problems</p>
+<h3 id="Shared-Data"><a href="#Shared-Data" class="headerlink" title="Shared Data"></a>Shared Data</h3><h3 id="Synchronization-of-Concurrent-processes"><a href="#Synchronization-of-Concurrent-processes" class="headerlink" title="Synchronization of Concurrent processes"></a>Synchronization of Concurrent processes</h3><p>Problems:</p>
+<ul>
+<li>how to ensure shared data correctly read/written</li>
+<li>how to synchronize these processes</li>
+</ul>
+<p>Solutions:<br><strong><em>concurrency control methods</em></strong></p>
+<h3 id="Atomic-Instruction"><a href="#Atomic-Instruction" class="headerlink" title="Atomic Instruction"></a>Atomic Instruction</h3><p>Two properties:</p>
+<ol>
+<li>executed to completion without interruption</li>
+<li>if two processes execute the same, the execution is sequential</li>
+</ol>
+<h2 id="Critical-Section-Problem"><a href="#Critical-Section-Problem" class="headerlink" title="Critical Section Problem"></a>Critical Section Problem</h2><p>each process has a code segment, called critical section, which accesses the shared data</p>
+<h2 id="Solution-1-Test-and-set"><a href="#Solution-1-Test-and-set" class="headerlink" title="Solution 1: Test-and-set"></a>Solution 1: Test-and-set</h2><ul>
+<li>Wait until the lock of the critical section is not locked, and them lock the lock</li>
+<li>Execute the critical section</li>
+<li>Unlock the lock</li>
+</ul>
+<p>TestAndSet is a headware atomic instruction to manage the lock</p>
+<pre><code>if the lock is locked
+then return  FALSE and lock the lock
+else return TRUE</code></pre><p>For a process:</p>
+<pre><code>do{
+    while(TesAndSet(lock));
+    critical section;
+    lock = FALSE;
+    remainder;
+}while(TRUE);</code></pre><h2 id="Solution-2-Semaphore"><a href="#Solution-2-Semaphore" class="headerlink" title="Solution 2: Semaphore"></a>Solution 2: Semaphore</h2><p>Let S be the number of available keys for the toilet</p>
+<pre><code>do{
+    A user waits until getting the key;
+    while(S&lt;=0);
+    S=S-1;
+    Enter and use the toilet;
+    The user returns the key and signals the other users;
+    S=S+1;
+    Do other things;
+}while (TRUE)</code></pre><h2 id="Process-synchronization"><a href="#Process-synchronization" class="headerlink" title="Process synchronization"></a>Process synchronization</h2><p>P1: SolveEquation1(); then signal(S);<br>P2: waits(S); then SolveEquation2();</p>
+<h2 id="Resource-Sharing"><a href="#Resource-Sharing" class="headerlink" title="Resource Sharing"></a>Resource Sharing</h2><p>How can N processes share M units of resources<br>Initialized S to M<br>For a process:</p>
+<pre><code>waits(S);
+Acquire one unit of resource and use it until completion;
+signal(S);</code></pre><h2 id="Producer-Consumer-Problem"><a href="#Producer-Consumer-Problem" class="headerlink" title="Producer-Consumer Problem"></a>Producer-Consumer Problem</h2><ul>
+<li>A producer produces data and writes it to a buffer</li>
+<li>A concumer reads &amp; removes this data from the shared buffer and concumes it</li>
+</ul>
+<p>Problem: big data with small shared buffer<br>Solution: </p>
+<ul>
+<li>Mutual exclusion</li>
+<li>Writing</li>
+<li>Reading </li>
+</ul>
+<p>Using Semaphore:</p>
+<ul>
+<li>mutex: binary semaphore</li>
+<li>empty: integer semaphore</li>
+<li>occupied: counts the number of occupied buffer spaces </li>
+</ul>
+<h3 id="Producer-Main-Idea"><a href="#Producer-Main-Idea" class="headerlink" title="Producer-Main Idea:"></a>Producer-Main Idea:</h3><p>Producer:</p>
+<pre class="line-numbers language-shell"><code class="language-shell">do{
+    Produce a data item;
+    wait(empty);
+    wait(mutex);
+    Write the data item to the buffer;
+    signal(mutex);
+    signal(occupied);
+}while(TRUE)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Consumer:</p>
+<pre class="line-numbers language-shell"><code class="language-shell">do{
+    wait(occupied);
+    wait(mutex);
+    Read and remove a data item from buffer;
+    signal(mutex);
+    signal(empty);
+    Consume the data item;
+}while(TRUE)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
       
     </div>
@@ -411,12 +454,12 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/2020/01/05/C%20Generics/" title="C Generics"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
+      <a href="/2020/03/05/An%20Brief%20Introduction%20to%20NLTK/" title="A Brief Introduction to NLTK"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/2019/11/14/Stanford%20CS%20107/Lecture%204/Lecture%204/" title="CS107 Lecture 4"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2020/01/05/C%20Generics/" title="C Generics"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
